@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albania — April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #1a1713;
+  --paper:  #faf7f2;
+  --warm:   #f2ead8;
+  --rule:   rgba(26,23,19,.1);
+  --terra:  #b84a18;
+  --sea:    #1a6385;
+  --pine:   #265438;
+  --rust:   #8a3612;
+  --muted:  #6a6050;
+  --light:  #9a8f7e;
+  --gap:    40px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+/* ── TYPE ── */
+a{color:inherit;text-decoration:none;}
+.lk{color:var(--sea);border-bottom:1px solid rgba(26,99,133,.25);transition:.15s;}
+.lk:hover{color:#1580a8;border-color:var(--sea);}
+.lk-gold{color:var(--rust);border-bottom:1px solid rgba(138,54,18,.25);}
+.lk-gold:hover{border-color:var(--rust);}
+.lk-ink{border-bottom:1px solid var(--rule);}
+.lk-ink:hover{border-color:var(--ink);}
+.mono{font-family:'DM Mono',monospace;}
+.label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--light);}
+.serif{font-family:'Cormorant Garamond',serif;}
+
+/* ── BUTTONS ── */
+.btn{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--muted);margin:4px 4px 0 0;transition:.15s;cursor:pointer;}
+.btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.btn-sea{border-color:rgba(26,99,133,.35);color:var(--sea);}
+.btn-sea:hover{background:var(--sea);color:var(--paper);}
+.btn-gold{border-color:rgba(138,54,18,.35);color:var(--rust);}
+.btn-gold:hover{background:var(--rust);color:var(--paper);}
+.btn-terra{border-color:rgba(184,74,24,.35);color:var(--terra);}
+.btn-terra:hover{background:var(--terra);color:var(--paper);}
+
+/* ── LAYOUT ── */
+.wrap{max-width:960px;margin:0 auto;padding:0 var(--gap);}
+.section{padding:64px 0 0;}
+.section-title{display:flex;align-items:baseline;gap:16px;margin-bottom:32px;padding-bottom:14px;border-bottom:1px solid var(--ink);}
+.section-num{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:52px;line-height:1;color:var(--rule);}
+.section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--light);margin-bottom:3px;}
+.section-h{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;}
+.section-h em{font-style:italic;color:var(--terra);}
+.divider{height:1px;background:var(--rule);margin:56px 0 0;}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:300;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--light);padding:12px 16px;white-space:nowrap;border-right:1px solid var(--rule);transition:.15s;}
+.nl:hover{color:var(--ink);background:var(--warm);}
+
+/* ── HERO ── */
+.hero{background:var(--warm);border-bottom:2px solid var(--ink);}
+.hero-top{display:flex;justify-content:space-between;align-items:center;padding:20px var(--gap);border-bottom:1px solid var(--rule);flex-wrap:wrap;gap:12px;}
+.hero-logo{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--light);}
+.hero-flights{display:flex;gap:8px;flex-wrap:wrap;}
+.fcard{background:white;border:1px solid var(--rule);padding:8px 14px;}
+.fcard.n{border-top:2px solid var(--terra);}
+.fcard.s{border-top:2px solid var(--sea);}
+.fc-who{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px;}
+.fcard.n .fc-who{color:var(--terra);}
+.fcard.s .fc-who{color:var(--sea);}
+.fc-rt{font-size:13px;font-weight:500;}
+.fc-tm{font-family:'DM Mono',monospace;font-size:10px;color:var(--light);}
+
+.hero-main{padding:56px var(--gap) 64px;text-align:center;}
+.hero-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:19px;color:var(--muted);margin-bottom:14px;opacity:0;animation:rise .8s .1s ease forwards;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(80px,14vw,168px);line-height:.88;letter-spacing:-.025em;color:var(--ink);margin-bottom:10px;opacity:0;animation:rise .8s .2s ease forwards;}
+.hero-title em{font-style:italic;color:var(--terra);}
+.hero-date{font-family:'DM Mono',monospace;font-size:clamp(10px,1.4vw,13px);letter-spacing:.3em;text-transform:uppercase;color:var(--light);margin-bottom:40px;opacity:0;animation:rise .8s .3s ease forwards;}
+.hero-tag{font-family:'Jost',sans-serif;font-size:12px;color:var(--muted);line-height:1.6;max-width:560px;margin:0 auto 40px;opacity:0;animation:rise .8s .35s ease forwards;}
+.hero-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:36px;opacity:0;animation:rise .8s .4s ease forwards;}
+.chip{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 13px;border:1px solid var(--rule);color:var(--muted);}
+.chip.active{border-color:rgba(184,74,24,.4);color:var(--terra);}
+.hero-crew{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;opacity:0;animation:rise .8s .5s ease forwards;}
+.crew-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 13px;border:1px solid var(--rule);color:var(--muted);}
+.crew-pill.n{border-color:var(--terra);color:var(--terra);}
+.crew-pill.s{border-color:var(--sea);color:var(--sea);}
+.crew-pill.sr{border-color:var(--pine);color:var(--pine);}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── QUICK VIEW ── */
+.qv{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:32px;}
+.qvc{background:var(--paper);padding:20px 18px;}
+.qvc.accent{background:var(--terra);}
+.qvc-l{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:6px;}
+.qvc.accent .qvc-l{color:rgba(250,247,242,.6);}
+.qvc-v{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;line-height:1;color:var(--ink);}
+.qvc.accent .qvc-v{color:white;font-size:36px;}
+.qvc-s{font-size:11px;color:var(--light);margin-top:3px;}
+.qvc.accent .qvc-s{color:rgba(250,247,242,.6);}
+.qv-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);padding:10px 14px;background:var(--warm);border-left:3px solid var(--terra);margin-bottom:0;}
+
+/* ── WHY THIS TRIP ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.why-card{background:var(--paper);padding:28px 26px;}
+.why-city{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:6px;}
+.why-h{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:8px;}
+.why-p{font-size:12px;color:var(--muted);line-height:1.65;}
+
+/* ── SIGNATURE MOMENTS ── */
+.moments{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.moment{background:var(--paper);padding:26px 22px;position:relative;}
+.moment-n{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:42px;line-height:1;color:var(--rule);position:absolute;top:20px;right:18px;}
+.moment-day{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:8px;}
+.moment-h{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;line-height:1.2;margin-bottom:8px;padding-right:32px;}
+.moment-p{font-size:12px;color:var(--muted);line-height:1.6;}
+.moment.anchor{background:var(--terra);}
+.moment.anchor .moment-n{color:rgba(255,255,255,.15);}
+.moment.anchor .moment-day{color:rgba(255,255,255,.6);}
+.moment.anchor .moment-h{color:white;}
+.moment.anchor .moment-p{color:rgba(255,255,255,.75);}
+
+/* ── ADVENTURE ── */
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.adv-card{background:var(--paper);padding:28px 24px;}
+.adv-icon{font-size:22px;margin-bottom:12px;}
+.adv-day{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin-bottom:6px;}
+.adv-h{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:10px;}
+.adv-p{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:14px;}
+.adv-detail{font-family:'DM Mono',monospace;font-size:9px;color:var(--light);border-top:1px solid var(--rule);padding-top:10px;margin-top:4px;}
+
+/* ── FOOD ── */
+.food-intro{font-size:15px;color:var(--muted);line-height:1.75;max-width:680px;margin-bottom:32px;font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:300;}
+.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.food-card{background:var(--paper);padding:22px 20px;}
+.food-h{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:6px;}
+.food-p{font-size:12px;color:var(--muted);line-height:1.6;}
+.food-ex{font-family:'DM Mono',monospace;font-size:9px;color:var(--terra);margin-top:6px;}
+
+/* ── MAP ── */
+.map-wrap{border:1px solid var(--rule);margin-bottom:0;}
+.map-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--light);margin-bottom:10px;}
+
+/* ── ROUTE STRIP ── */
+.rs{display:flex;align-items:center;overflow-x:auto;padding:24px 0;scrollbar-width:none;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.rs::-webkit-scrollbar{display:none;}
+.rn{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:76px;}
+.rd{width:8px;height:8px;border-radius:50%;background:var(--terra);}
+.rd.fly{background:var(--ink);}
+.rc{font-size:11px;font-weight:500;text-align:center;color:var(--ink);}
+.rd2{font-family:'DM Mono',monospace;font-size:8px;color:var(--light);text-align:center;}
+.rl{flex:1;min-width:16px;height:1px;background:var(--terra);position:relative;margin-bottom:16px;}
+.rl-lbl{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:7px;color:var(--light);white-space:nowrap;}
+
+/* ── DAY CARDS ── */
+.day{margin-bottom:48px;border:1px solid var(--rule);}
+.day-head{display:grid;grid-template-columns:64px 1fr auto;align-items:center;padding:20px 24px;border-bottom:1px solid var(--rule);gap:16px;}
+.day-num{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:52px;line-height:1;color:rgba(26,23,19,.1);border-right:1px solid var(--rule);padding-right:16px;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.day-num::before{content:'DAY';font-family:'DM Mono',monospace;font-size:7px;letter-spacing:.18em;color:var(--light);line-height:1;}
+.day-info{}
+.day-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:3px;}
+.day-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;line-height:1.2;}
+.day-title em{font-style:italic;color:var(--terra);}
+.day-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
+.day-loc{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--rule);color:var(--light);}
+.day-adv{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;background:var(--terra);color:white;}
+
+/* day body */
+.day-body{padding:20px 24px;}
+.day-summary{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;max-width:680px;}
+
+/* stay card */
+.stay{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:14px 16px;background:var(--warm);border-left:3px solid var(--rust);margin-bottom:16px;flex-wrap:wrap;}
+.stay-l{}
+.stay-e{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin-bottom:3px;}
+.stay-n{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--ink);margin-bottom:4px;}
+.stay-d{font-size:11px;color:var(--muted);line-height:1.55;max-width:440px;}
+.stay-links{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.stay-r{text-align:right;flex-shrink:0;}
+.stay-rate{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--terra);}
+.stay-note{font-family:'DM Mono',monospace;font-size:8px;color:var(--light);margin-top:2px;}
+
+/* drive block */
+.drive{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-left:2px solid var(--sea);background:rgba(26,99,133,.04);margin-bottom:16px;font-size:12px;}
+.drive-t{font-weight:500;color:var(--ink);margin-bottom:2px;}
+.drive-d{color:var(--muted);line-height:1.55;}
+.drive-c{font-family:'DM Mono',monospace;font-size:9px;color:var(--sea);margin-top:2px;}
+
+/* flight grid */
+.flt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
+.flt-card{padding:14px 16px;border:1px solid var(--rule);border-top:2px solid;background:var(--warm);}
+.flt-card.n{border-top-color:var(--terra);}
+.flt-card.s{border-top-color:var(--sea);}
+.flt-who{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;}
+.flt-card.n .flt-who{color:var(--terra);}
+.flt-card.s .flt-who{color:var(--sea);}
+.flt-time{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;line-height:1;margin-bottom:4px;}
+.flt-detail{font-size:11px;color:var(--muted);line-height:1.55;}
+.flt-detail b{color:var(--ink);}
+
+/* alert */
+.alert{display:flex;gap:10px;align-items:flex-start;padding:11px 14px;background:#fef3ee;border:1px solid rgba(184,74,24,.2);border-left:3px solid var(--terra);margin-bottom:16px;font-size:12px;color:var(--ink);}
+.alert b{color:var(--terra);}
+
+/* plan rows */
+.plan{display:flex;flex-direction:column;border-top:1px solid var(--rule);}
+.plan-row{display:grid;grid-template-columns:60px 1fr 72px;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);transition:.1s;}
+.plan-row:last-child{border-bottom:none;}
+.plan-row:hover{background:var(--warm);margin:0 -24px;padding:10px 24px;}
+.pr-time{font-family:'DM Mono',monospace;font-size:9px;color:var(--light);padding-top:2px;}
+.pr-body{}
+.pr-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;}
+.pr-desc{font-size:11px;color:var(--muted);line-height:1.6;}
+.pr-cost{font-family:'DM Mono',monospace;font-size:9px;color:var(--terra);text-align:right;padding-top:2px;white-space:nowrap;}
+
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;}
+.tag{font-family:'DM Mono',monospace;font-size:8px;padding:2px 7px;border:1px solid var(--rule);color:var(--light);}
+.tag-adv{border-color:rgba(184,74,24,.3);color:var(--terra);background:rgba(184,74,24,.04);}
+.tag-food{border-color:rgba(138,54,18,.3);color:var(--rust);background:rgba(138,54,18,.04);}
+.tag-sea{border-color:rgba(26,99,133,.3);color:var(--sea);background:rgba(26,99,133,.04);}
+.tag-hist{border-color:rgba(26,23,19,.15);color:var(--muted);}
+.tag-night{border-color:rgba(26,99,133,.3);color:var(--sea);background:rgba(26,99,133,.04);}
+
+/* collapsible */
+.detail-toggle{display:flex;align-items:center;gap:8px;padding:10px 0;cursor:pointer;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--light);border-top:1px solid var(--rule);margin-top:4px;user-select:none;}
+.detail-toggle:hover{color:var(--ink);}
+.toggle-arrow{transition:transform .2s;display:inline-block;}
+.detail-toggle.open .toggle-arrow{transform:rotate(90deg);}
+.detail-body{display:none;padding:14px 0 4px;}
+.detail-body.open{display:block;}
+.detail-row{display:flex;gap:10px;font-size:11px;color:var(--muted);padding:5px 0;border-bottom:1px solid var(--rule);line-height:1.55;}
+.detail-row:last-child{border-bottom:none;}
+.detail-key{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--light);min-width:72px;flex-shrink:0;padding-top:1px;}
+.detail-val{flex:1;}
+.detail-val b{color:var(--ink);}
+
+/* ── BUDGET ── */
+.budget-grid{display:grid;grid-template-columns:repeat(4,1fr) 1.2fr;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.budget-cell{background:var(--paper);padding:20px 18px;}
+.budget-cell.total{background:var(--terra);}
+.bc-l{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin-bottom:6px;}
+.budget-cell.total .bc-l{color:rgba(255,255,255,.6);}
+.bc-v{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;line-height:1;color:var(--ink);}
+.budget-cell.total .bc-v{color:white;font-size:38px;}
+.bc-s{font-size:11px;color:var(--light);margin-top:3px;}
+.budget-cell.total .bc-s{color:rgba(255,255,255,.6);}
+.budget-note{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);padding:9px 14px;background:var(--warm);border-left:3px solid var(--terra);margin-top:1px;}
+
+/* ── BOOKING ── */
+.book-section{margin-top:8px;}
+.book-group-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);padding:10px 0;border-bottom:1px solid var(--ink);}
+.book-item{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap;}
+.book-item:last-child{border-bottom:none;}
+.bi-name{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;}
+.bi-note{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:6px;}
+.bi-links{display:flex;flex-wrap:wrap;gap:4px;}
+.urg{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid;flex-shrink:0;align-self:flex-start;white-space:nowrap;}
+.u1{border-color:var(--terra);color:var(--terra);}
+.u2{border-color:rgba(26,99,133,.4);color:var(--sea);}
+.u3{border-color:var(--rule);color:var(--muted);}
+
+/* ── TOOLKIT ── */
+.toolkit{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:64px;}
+.tk-card{background:var(--paper);padding:22px 20px;}
+.tk-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--rule);}
+.tk-card ul{list-style:none;}
+.tk-card li{font-size:11px;color:var(--muted);padding:5px 0 5px 12px;position:relative;border-bottom:1px solid var(--rule);line-height:1.55;}
+.tk-card li:last-child{border-bottom:none;}
+.tk-card li::before{content:'—';position:absolute;left:0;color:var(--light);font-size:9px;top:7px;}
+.tk-card li b{color:var(--ink);font-weight:500;}
+
+/* ── FOOTER ── */
+.footer{padding:24px var(--gap);text-align:center;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);background:var(--warm);border-top:1px solid var(--rule);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:680px){
+  :root{--gap:20px;}
+  .hero-top{padding:14px var(--gap);}
+  .qv{grid-template-columns:1fr 1fr;}
+  .why-grid,.moments,.adv-grid,.food-grid{grid-template-columns:1fr;}
+  .flt-grid{grid-template-columns:1fr;}
+  .day-head{grid-template-columns:auto 1fr;}
+  .day-meta{display:none;}
+  .budget-grid{grid-template-columns:1fr 1fr;}
+  .toolkit{grid-template-columns:1fr;}
+  .plan-row{grid-template-columns:52px 1fr auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero">
+  <div class="hero-top">
+    <div class="hero-logo">Private Itinerary · Nick + Shannon · Albania · April 2026</div>
+    <div class="hero-flights">
+      <div class="fcard n">
+        <div class="fc-who">Nick · JFK</div>
+        <div class="fc-rt">JFK → VIE → TIA</div>
+        <div class="fc-tm">UA9820 + UA9837 · Dep Thu Apr 9, 9:45 PM · Arr Fri 2:10 PM</div>
+      </div>
+      <div class="fcard s">
+        <div class="fc-who">Shannon · FRA</div>
+        <div class="fc-rt">FRA → TIA</div>
+        <div class="fc-tm">Lufthansa · Dep Fri Apr 10, 9:20 PM · Arr 11:30 PM</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-main">
+    <div class="hero-eyebrow">9 Days · 2 Friends · One Perfect Trip</div>
+    <div class="hero-title">Al<em>ba</em>nia</div>
+    <div class="hero-date">April 10 — 18, 2026</div>
+    <div class="hero-tag">A low-season Albania trip built around Tirana nightlife, Berat charm, and the Riviera at its prettiest: seafood, scenic drives, hidden beaches, and built-in adventure.</div>
+    <div class="hero-chips">
+      <span class="chip active">Coastal</span>
+      <span class="chip active">Food-first</span>
+      <span class="chip active">Adventure-forward</span>
+      <span class="chip active">Great value</span>
+      <span class="chip">Nightlife, but not every night</span>
+    </div>
+    <div class="hero-crew">
+      <span class="crew-pill n">Nick — NYC</span>
+      <span class="crew-pill s">Shannon — Frankfurt</span>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav class="nav">
+  <a class="nl" href="#overview">Overview</a>
+  <a class="nl" href="#moments">Highlights</a>
+  <a class="nl" href="#adventure">Adventure</a>
+  <a class="nl" href="#food">Food</a>
+  <a class="nl" href="#itinerary">Itinerary</a>
+  <a class="nl" href="#budget">Budget</a>
+  <a class="nl" href="#booking">Bookings</a>
+  <a class="nl" href="#toolkit">Toolkit</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ═══════════════════════════ OVERVIEW ═══════════════════════════ -->
+<div id="overview" class="section">
+  <div class="section-title">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-label">Quick View</div>
+      <div class="section-h">The Trip at a <em>Glance</em></div>
+    </div>
+  </div>
+
+  <div class="qv">
+    <div class="qvc"><div class="qvc-l">Tirana</div><div class="qvc-v">2 nights</div><div class="qvc-s">Apr 10–12 · arrival + one big night out</div></div>
+    <div class="qvc"><div class="qvc-l">Berat</div><div class="qvc-v">2 nights</div><div class="qvc-s">Apr 12–14 · castle, wine, old town</div></div>
+    <div class="qvc"><div class="qvc-l">Himarë</div><div class="qvc-v">3 nights</div><div class="qvc-s">Apr 14–17 · Riviera base, adventure, beaches</div></div>
+    <div class="qvc"><div class="qvc-l">Ksamil</div><div class="qvc-v">1 night</div><div class="qvc-s">Apr 17–18 · final payoff, fly home</div></div>
+    <div class="qvc accent"><div class="qvc-l">Budget per person</div><div class="qvc-v">€380–520</div><div class="qvc-s">ex-flights · low season pricing</div></div>
+  </div>
+  <div class="qv-note">Rental car throughout: TIA pickup Apr 10, return TIA Apr 18 morning. Full CDW + theft insurance always.</div>
+
+  <div style="margin-top:32px;">
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-city">Tirana</div>
+        <div class="why-h">Energy and one real night out</div>
+        <div class="why-p">Blloku is legitimately fun — LGBTQ+-friendly nightlife, the best traditional restaurant in the country, a Cold War bunker museum, and the kind of café culture that makes you slow down. Two nights is the right amount.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-city">Berat</div>
+        <div class="why-h">Stone streets, golden light, wine</div>
+        <div class="why-p">A UNESCO old town where Ottoman houses stack up a hillside, people actually live inside a medieval castle, and a winery produces genuinely great wine 15 minutes from your guesthouse. It's the romantic middle of the trip.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-city">Himarë</div>
+        <div class="why-h">The best Riviera base</div>
+        <div class="why-p">Well-positioned for everything on the Albanian Riviera. Dhërmi 26 minutes north. Porto Palermo 13 minutes south. Gjipe Beach 33 minutes. Excellent seafood on the harbor. Three nights here is the trip's heartbeat.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-city">Ksamil</div>
+        <div class="why-h">The prettiest-water finale</div>
+        <div class="why-p">White sand, three swimmable islands, and water color that looks wrong in photos because it's too blue. Worth the slightly earlier departure morning. One night — come for the evening, leave for the airport.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div style="margin-top:32px;">
+    <div class="map-label">The Route · Click any city to jump to that day</div>
+    <div id="tripmap" style="height:400px;border:1px solid var(--rule);"></div>
+  </div>
+
+  <!-- ROUTE STRIP -->
+  <div class="rs" style="margin-top:16px;">
+    <div class="rn"><div class="rd fly"></div><div class="rc">✈ TIA</div><div class="rd2">Apr 10</div></div>
+    <div class="rl"><span class="rl-lbl">21 min</span></div>
+    <div class="rn"><div class="rd"></div><div class="rc">Petrela</div><div class="rd2">Day 3</div></div>
+    <div class="rl"><span class="rl-lbl">1h 40m</span></div>
+    <div class="rn"><div class="rd"></div><div class="rc">Tirana</div><div class="rd2">Apr 10–12</div></div>
+    <div class="rl"><span class="rl-lbl">1h 40m</span></div>
+    <div class="rn"><div class="rd"></div><div class="rc">Berat</div><div class="rd2">Apr 12–14</div></div>
+    <div class="rl"><span class="rl-lbl">2h 39m</span></div>
+    <div class="rn"><div class="rd"></div><div class="rc">Himarë</div><div class="rd2">Apr 14–17</div></div>
+    <div class="rl"><span class="rl-lbl">1h 31m</span></div>
+    <div class="rn"><div class="rd"></div><div class="rc">Ksamil</div><div class="rd2">Apr 17–18</div></div>
+    <div class="rl"><span class="rl-lbl">3h 44m</span></div>
+    <div class="rn"><div class="rd fly"></div><div class="rc">✈ TIA</div><div class="rd2">Apr 18</div></div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--light);padding:8px 0;margin-bottom:0;">All drive times verified via Google Maps, March 2026.</div>
+</div>
+
+<!-- ═══════════════════════════ SIGNATURE MOMENTS ═══════════════════════════ -->
+<div id="moments" class="section">
+  <div class="section-title">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-label">Six Reasons to Go</div>
+      <div class="section-h"><em>Signature</em> Moments</div>
+    </div>
+  </div>
+
+  <div class="moments">
+    <div class="moment anchor">
+      <div class="moment-n">1</div>
+      <div class="moment-day">Saturday, Apr 11 · Tirana</div>
+      <div class="moment-h">Blloku All Night</div>
+      <div class="moment-p">Mullixhiu dinner — the best traditional Albanian table in the country. Then Radio Bar, then Stereo Club until 4 AM. The most LGBTQ+-friendly nightlife in Albania, in a neighborhood that used to be forbidden to ordinary citizens.</div>
+    </div>
+    <div class="moment">
+      <div class="moment-n">2</div>
+      <div class="moment-day">Sunday, Apr 12 · Petrela</div>
+      <div class="moment-h">Zipline + Quads over a Canyon</div>
+      <div class="moment-p">21 minutes south of Tirana. Zip over a dramatic gorge, then quad-bike the surrounding hills. The intentional hangover cure. 4.9★ and booked in advance — this is not a side activity, it's Day 3's main event.</div>
+    </div>
+    <div class="moment">
+      <div class="moment-n">3</div>
+      <div class="moment-day">Monday, Apr 13 · Berat</div>
+      <div class="moment-h">Castle at Golden Hour</div>
+      <div class="moment-p">Climb to Berat's inhabited medieval castle in the late afternoon. Watch the light turn the thousand windows gold from above. Then descend slowly for wine at Çobo and dinner by candlelight at Antigonea.</div>
+    </div>
+    <div class="moment">
+      <div class="moment-n">4</div>
+      <div class="moment-day">Tuesday, Apr 14 · Berat</div>
+      <div class="moment-h">Osumi Canyon</div>
+      <div class="moment-p">25 km of towering limestone gorge. Cliff jumps, natural water slides, rappelling through one of the most dramatic canyons in the Balkans. Wetsuits and gear provided. This is the trip's adrenaline anchor.</div>
+    </div>
+    <div class="moment anchor">
+      <div class="moment-n">5</div>
+      <div class="moment-day">Thursday, Apr 16 · Himarë</div>
+      <div class="moment-h">Gjipe Hike-In Beach</div>
+      <div class="moment-p">33 minutes north. Hike 40 minutes down through a limestone canyon to a completely hidden pebble beach. Crystal water, towering cliffs, almost no one else. The kind of place you don't believe exists until you're standing in it.</div>
+    </div>
+    <div class="moment">
+      <div class="moment-n">6</div>
+      <div class="moment-day">Friday, Apr 17 · Ksamil</div>
+      <div class="moment-h">Blue Water Finale</div>
+      <div class="moment-p">Blue Eye spring in the morning — electric blue water from an underground river with no known bottom. Then Ksamil: white sand, three islands you can swim to, and a seafood dinner watching the sun go down on the Ionian.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ADVENTURE ═══════════════════════════ -->
+<div id="adventure" class="section">
+  <div class="section-title">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-label">Core Itinerary — Not Optional</div>
+      <div class="section-h">Built-In <em>Adventure</em></div>
+    </div>
+  </div>
+
+  <p style="font-size:13px;color:var(--muted);line-height:1.75;max-width:640px;margin-bottom:28px;">This trip is not just coast and dinners. It has real movement built in: one adrenaline day near Tirana, one canyon day inland, and one hike-in beach day on the Riviera. These are locked into the schedule, not suggestions.</p>
+
+  <div class="adv-grid">
+    <div class="adv-card">
+      <div class="adv-icon">⚡</div>
+      <div class="adv-day">Day 3 · Sunday, April 12 · Petrela</div>
+      <div class="adv-h">Zipline + Quad Bikes</div>
+      <div class="adv-p">The hangover cure that doubles as the day's main event. Zipline over a canyon gorge 21 minutes south of Tirana, then quad-bike the surrounding terrain. 4.9★, 1,840+ reviews. Fresh air, adrenaline, instant revival.</div>
+      <div class="adv-detail">
+        Book: <a href="https://www.zipline.al/" target="_blank" class="lk">zipline.al</a> · <a href="tel:+355674004444" class="lk-gold">+355 67 400 4444</a><br>
+        Zipline: pre-book online · Quads: added on-site, no separate booking<br>
+        Cost: ~€25–35/pp · Allow 2.5 hrs including drive
+      </div>
+    </div>
+    <div class="adv-card">
+      <div class="adv-icon">🏔</div>
+      <div class="adv-day">Day 5 · Tuesday, April 14 · Berat</div>
+      <div class="adv-h">Osumi Canyon Canyoning</div>
+      <div class="adv-p">25 km of towering limestone gorge — one of the most spectacular in the Balkans. Cliff jumps, natural water slides, swimming through gorges, rappelling. Wetsuits and gear provided. The trip's single biggest adrenaline day.</div>
+      <div class="adv-detail">
+        Book: <a href="https://www.instagram.com/albania_canyoning/" target="_blank" class="lk">@albania_canyoning</a> · <a href="tel:+355695495192" class="lk-gold">+355 69 549 5192</a><br>
+        Book 2 weeks ahead. Reconfirm morning of.<br>
+        Cost: ~€30–40/pp · 3–4 hours
+      </div>
+    </div>
+    <div class="adv-card">
+      <div class="adv-icon">🏖</div>
+      <div class="adv-day">Day 7 · Thursday, April 16 · Himarë</div>
+      <div class="adv-h">Gjipe Beach Hike-In</div>
+      <div class="adv-p">Hike 30–40 minutes down through a limestone canyon to a hidden pebble beach backed by towering cliffs. Crystal water, fish visible 20 feet down, virtually no one in April. The most memorable beach day of the trip.</p>
+      <div class="adv-detail">
+        Location: <a href="https://www.google.com/maps/search/?api=1&query=Gjipe+Beach+Albania" target="_blank" class="lk">Gjipe Beach</a> · 33 min north of Himarë<br>
+        Parking: ~€4 cash · Wear real shoes, bring goggles + water<br>
+        Cost: €4 parking + beach bar lunch ~€10/pp
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ FOOD ═══════════════════════════ -->
+<div id="food" class="section">
+  <div class="section-title">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-label">What This Trip Does Best</div>
+      <div class="section-h">The <em>Food</em></div>
+    </div>
+  </div>
+
+  <p class="food-intro">"Albania's edge here is not polished luxury. It's absurdly good value on fresh seafood, dramatic scenery, and long meals in places that still feel completely under-hyped."</p>
+
+  <div class="food-grid">
+    <div class="food-card">
+      <div class="food-h">The Best Dinner in Albania</div>
+      <div class="food-p">Mullixhiu, Tirana. Michelin-trained chef Bledar Kola cooking heirloom Albanian ingredients most people have never heard of. Outstanding wine list. Budget ~€20–25/pp — extraordinarily cheap for what it is.</div>
+      <div class="food-ex"><a href="https://www.google.com/maps/search/?api=1&query=Mullixhiu+Restaurant+Tirana+Albania" target="_blank" class="lk">↗ Google Maps · Reserve ahead</a></div>
+    </div>
+    <div class="food-card">
+      <div class="food-h">Winery Lunch in Berat</div>
+      <div class="food-p">Çobo Winery, 15 min from town. Terrace tasting of 4–5 wines — their Shesh i Zi red is genuinely excellent. Cheese, bread, and local meats included. This is the slow luxurious afternoon in the middle of the trip.</div>
+      <div class="food-ex"><a href="https://www.google.com/maps/search/?api=1&query=Cobo+Winery+Berat+Albania" target="_blank" class="lk">↗ Google Maps</a> · <a href="tel:+355692062726" class="lk-gold">+355 69 206 2726</a></div>
+    </div>
+    <div class="food-card">
+      <div class="food-h">Riviera Seafood</div>
+      <div class="food-p">Three nights in Himarë. Order what came in that morning — grilled sea bass, bream, mussels in wine, cold Korça beer. Taverna Lefteri on the harbor is the reliable anchor. Budget €10–16/pp.</div>
+      <div class="food-ex"><a href="https://www.google.com/maps/search/?api=1&query=Taverna+Lefteri+Himara+Albania" target="_blank" class="lk">↗ Taverna Lefteri</a></div>
+    </div>
+    <div class="food-card">
+      <div class="food-h">Traditional Albanian — Berat</div>
+      <div class="food-p">Mangalemi Restaurant for arrival night: stuffed peppers, grilled meats, local wine below the castle. Antigonea the second night: stone walls, candlelit, intimate. Two different restaurants, two entirely different meals.</div>
+      <div class="food-ex"><a href="https://www.google.com/maps/search/?api=1&query=Mangalemi+Restaurant+Berat+Albania" target="_blank" class="lk">↗ Mangalemi</a> · <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Antigonea+Berat+Albania" target="_blank" class="lk">↗ Antigonea</a></div>
+    </div>
+    <div class="food-card">
+      <div class="food-h">Beach Bar Lunch</div>
+      <div class="food-p">Day 7 at Gjipe — simple grilled food and cold drinks at the beach bar after the canyon hike. Day 8 in Ksamil — long lazy harbor lunch if the weather is cool. These are the meals that make a trip.</div>
+      <div class="food-ex">Budget €8–12/pp · Cash preferred</div>
+    </div>
+    <div class="food-card">
+      <div class="food-h">Arrival Dinner · Tirana</div>
+      <div class="food-p">Oda Restaurant for Nick's first solo night: a beautiful old Albanian house with courtyard seating, traditional food, warm atmosphere. The right introduction to the country at the right price.</div>
+      <div class="food-ex"><a href="https://www.google.com/maps/search/?api=1&query=Oda+Restaurant+Tirana+Blloku" target="_blank" class="lk">↗ Google Maps · Reserve ahead</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ITINERARY ═══════════════════════════ -->
+<div id="itinerary" class="section">
+  <div class="section-title">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-label">Day by Day</div>
+      <div class="section-h">The <em>Itinerary</em></div>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day" id="d1">
+    <div class="day-head">
+      <div class="day-num">01</div>
+      <div class="day-info">
+        <div class="day-label">Friday, April 10 · Tirana</div>
+        <div class="day-title">Arrival · <em>Solo First Night</em></div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Tirana</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Nick lands at 2:10 PM, picks up the rental car, checks into the hotel. Afternoon wander through Skanderbeg Square and Blloku. Dinner solo at Oda. Picks up Shannon at TIA at 11:30 PM.</div>
+
+      <div class="flt-grid">
+        <div class="flt-card n">
+          <div class="flt-who">Nick · Arrives today</div>
+          <div class="flt-time">2:10 PM</div>
+          <div class="flt-detail"><b>UA9820</b> JFK→VIE dep Thu Apr 9, 9:45 PM<br><b>UA9837</b> VIE→TIA dep 12:40 PM · arr 2:10 PM<br>⚠ Vienna layover 45 min — move fast, no checked bags</div>
+        </div>
+        <div class="flt-card s">
+          <div class="flt-who">Shannon · Arrives tonight</div>
+          <div class="flt-time">11:30 PM</div>
+          <div class="flt-detail"><b>Lufthansa</b> FRA→TIA nonstop · 2h 10m<br>Dep Fri Apr 10, 9:20 PM · Arr 11:30 PM<br>Nick picks up at TIA</div>
+        </div>
+      </div>
+
+      <div class="stay">
+        <div class="stay-l">
+          <div class="stay-e">Tonight's Stay · 2 nights Apr 10–12</div>
+          <div class="stay-n">Hotel near Blloku — Tirana</div>
+          <div class="stay-d">Book a boutique hotel or private-room property in or near Blloku. Suggested: <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Elior+Tirana+Albania" target="_blank" class="lk">Hotel Elior</a> (rated 4.7★, Blloku-adjacent, private rooms, solid breakfast) or search Booking.com for "Blloku area" and filter 4-star. Target €40–70/pp/night.</div>
+          <div class="stay-links"><a href="https://www.booking.com/searchresults.html?ss=Blloku+Tirana" target="_blank" class="btn btn-sea">Booking.com</a><a href="https://www.google.com/maps/search/?api=1&query=boutique+hotel+Blloku+Tirana+Albania" target="_blank" class="btn btn-sea">Google Maps</a></div>
+        </div>
+        <div class="stay-r"><div class="stay-rate">€40–70</div><div class="stay-note">per person / night</div></div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">2:10 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Land · Pick up rental car at TIA</div>
+            <div class="pr-desc">Pre-booked with <a href="https://www.sixt.com/car-rental/albania/tirana-airport/" target="_blank" class="lk">Sixt</a> or <a href="https://www.europcar.com/en-gb/car-rental/albania/tirana-airport" target="_blank" class="lk">Europcar</a>. 8 days, return TIA Apr 18. Full CDW + theft insurance. Fuel up near the airport.</div>
+          </div>
+          <div class="pr-cost">~€200–240</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">3:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Check in · <a href="https://www.google.com/maps/search/?api=1&query=Skanderbeg+Square+Tirana+Albania" target="_blank" class="lk">Skanderbeg Square</a> · Blloku wander</div>
+            <div class="pr-desc">The central plaza — Et'hem Bey Mosque, National History Museum. Then south into Blloku: the former forbidden zone of the communist elite, now Albania's hippest neighborhood. Find a café, order a raki.</div>
+            <div class="tags"><span class="tag tag-hist">explore</span></div>
+          </div>
+          <div class="pr-cost">Free</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">7:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Nick: Dinner solo — <a href="https://www.google.com/maps/search/?api=1&query=Oda+Restaurant+Tirana+Blloku" target="_blank" class="lk">Oda Restaurant</a></div>
+            <div class="pr-desc">Traditional Albanian cuisine in a beautiful old courtyard house. Stuffed peppers, grilled meats, local wine. The right first meal. Reserve ahead.</div>
+            <div class="tags"><span class="tag tag-food">dinner</span></div>
+          </div>
+          <div class="pr-cost">€12–15</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">11:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Pick up Shannon at TIA</div>
+            <div class="pr-desc">~20 min drive from Blloku. Check in, go to sleep. Tomorrow is the big day.</div>
+          </div>
+          <div class="pr-cost">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day" id="d2">
+    <div class="day-head">
+      <div class="day-num">02</div>
+      <div class="day-info">
+        <div class="day-label">Saturday, April 11 · Tirana</div>
+        <div class="day-title">City Day · <em>Blloku All Night</em></div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Tirana</div>
+        <div class="day-adv">Night Out</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Nick and Shannon together. Morning at Bunk'Art 2 — the communist secret police bunker museum. Afternoon in Blloku. Mullixhiu for dinner — the best traditional Albanian restaurant in the country. Then Radio Bar and Stereo Club until 4 AM.</div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">Late AM</div>
+          <div class="pr-body">
+            <div class="pr-title">Nick + Shannon · Slow start</div>
+            <div class="pr-desc">Breakfast at the hotel. Coffee, no rush. Tonight is the main event — pace the day accordingly.</div>
+          </div>
+          <div class="pr-cost">—</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">11:00 AM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://bunkart.al/" target="_blank" class="lk">Bunk'Art 2</a> — the communist secret police bunker</div>
+            <div class="pr-desc">Sheshi Avni Rustemi · 4.5★. Built to shelter government ministers from nuclear attack, now an extraordinary museum of the communist secret police. Surveillance files, interrogation cells, propaganda. Unsettling and fascinating. 1.5 hrs. Pre-book at bunkart.al.</div>
+            <div class="tags"><span class="tag tag-hist">museum</span></div>
+          </div>
+          <div class="pr-cost">€5–8/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">1:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Lunch · Blloku afternoon</div>
+            <div class="pr-desc">Lunch at Juvenilja (~€7/pp, good traditional Albanian). Then: <a href="https://www.google.com/maps/search/?api=1&query=House+of+Leaves+Museum+Tirana+Albania" target="_blank" class="lk">House of Leaves</a> (former Sigurimi surveillance HQ, €4), street art, Et'hem Bey Mosque bazaar. Optional: <a href="https://www.google.com/maps/search/?api=1&query=Dajti+Ekspres+cable+car+Tirana+Albania" target="_blank" class="lk">Dajti cable car</a> for panoramic views (~€6).</div>
+            <div class="tags"><span class="tag tag-food">lunch</span><span class="tag tag-hist">explore</span></div>
+          </div>
+          <div class="pr-cost">€6–10/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">7:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Dinner — <a href="https://www.google.com/maps/search/?api=1&query=Mullixhiu+Restaurant+Tirana+Albania" target="_blank" class="lk">Mullixhiu</a> · The best in Albania</div>
+            <div class="pr-desc">Rruga Ismail Qemali, Blloku. Michelin-trained chef, heirloom Albanian ingredients, outstanding wine list. Cornbread with aged butter, tave kosi (baked yogurt lamb), seasonal specials. <b>Reserve in advance.</b> Eat properly — you're going until 4 AM.</div>
+            <div class="tags"><span class="tag tag-food">best in albania</span></div>
+          </div>
+          <div class="pr-cost">€20–25/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">10:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Stop 1: <a href="https://www.google.com/maps/search/?api=1&query=Radio+Bar+Tirana+Blloku+Albania" target="_blank" class="lk">Radio Bar</a></div>
+            <div class="pr-desc">Best cocktails in Blloku. Moody, atmospheric. 1–2 rounds and move — this is the warm-up. <b>Do not arrive at bars before 10 PM.</b> Hard rule.</div>
+            <div class="tags"><span class="tag tag-night">cocktails</span></div>
+          </div>
+          <div class="pr-cost">€10–14/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">11:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Stop 2: <a href="https://www.google.com/maps/search/?api=1&query=Stereo+Club+Tirana+Blloku+Albania" target="_blank" class="lk">Stereo Club</a> — all night</div>
+            <div class="pr-desc">The most inclusive and LGBTQ+-friendly club in Albania. Electronic + Balkan pop. Mixed, welcoming, high-energy. Goes until 4–5 AM. Cover free or minimal before midnight. Use <a href="https://bolt.eu/" target="_blank" class="lk">Bolt</a> home — don't walk alone after 2 AM.</div>
+            <div class="tags"><span class="tag tag-night">dancing</span><span class="tag tag-night">LGBTQ+ friendly</span></div>
+          </div>
+          <div class="pr-cost">€0–5 cover</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day" id="d3">
+    <div class="day-head">
+      <div class="day-num">03</div>
+      <div class="day-info">
+        <div class="day-label">Sunday, April 12 · Tirana → Berat</div>
+        <div class="day-title"><em>Zipline + Quads</em> · Drive to Berat</div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Tirana → Berat</div>
+        <div class="day-adv">⚡ Adventure Day</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Sleep in. Then: zipline over a canyon and quad-bike the hills at Petrela — the hangover cure. Drive south to Berat with an optional stop en route. Arrive for a first walk through Mangalem and dinner on the hill.</div>
+
+      <div class="stay">
+        <div class="stay-l">
+          <div class="stay-e">Tonight's Stay · 2 nights Apr 12–14</div>
+          <div class="stay-n"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Guri+Mangalem+Berat+Albania" target="_blank" class="lk-ink">Guesthouse Guri — Mangalem Quarter, Berat</a></div>
+          <div class="stay-d">4.9★ · Inside the historic Mangalem hillside neighborhood. Stone walls, traditional rugs, breakfast included. Elderly Albanian couple who have been welcoming guests for decades. Follow their hand-painted signs up through the lanes.</div>
+          <div class="stay-links"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Guri+Mangalem+Berat+Albania" target="_blank" class="btn btn-gold">Google Maps</a><a href="tel:+355682070560" class="btn btn-gold">📞 +355 68 207 0560</a></div>
+        </div>
+        <div class="stay-r"><div class="stay-rate">€20–25</div><div class="stay-note">per person / night · 2 nights</div></div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">Late AM</div>
+          <div class="pr-body">
+            <div class="pr-title">Sleep in · Hotel breakfast · Reconstitute</div>
+            <div class="pr-desc">Leave for Petrela by 11 AM.</div>
+          </div>
+          <div class="pr-cost">Incl.</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">11:30 AM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.zipline.al/" target="_blank" class="lk">Zipline Albania</a> · <a href="https://www.google.com/maps/search/?api=1&query=Zipline+Albania+Petrela+Tirana" target="_blank" class="lk">Petrela</a> — zipline + quads</div>
+            <div class="pr-desc">21 min south of Tirana · 4.9★ · Zip over a canyon, then quad-bike the hills. Quads added on-site — no separate booking. Drone video optional. Book the zipline ahead at <a href="https://www.zipline.al/" target="_blank" class="lk">zipline.al</a> or <a href="tel:+355674004444" class="lk-gold">+355 67 400 4444</a>. Buy direct.</div>
+            <div class="tags"><span class="tag tag-adv">⚡ zipline</span><span class="tag tag-adv">⚡ quad bikes</span></div>
+          </div>
+          <div class="pr-cost">€25–35/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">2:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Quick lunch · Head south</div>
+          </div>
+          <div class="pr-cost">€6–8/pp</div>
+        </div>
+      </div>
+
+      <div class="drive">
+        <div>🚗</div>
+        <div>
+          <div class="drive-t">Tirana → Berat · ~98 km · 1 hr 40 min · A3 motorway south</div>
+          <div class="drive-d"><b>Optional stops:</b> <a href="https://www.google.com/maps/search/?api=1&query=Apollonia+ruins+Albania" target="_blank" class="lk">Apollonia ancient ruins</a> (45 min detour west of Fier — Greek colonial city, sweeping views, ~€3, adds ~1 hr) · Coffee stop in Fier or Lushnjë · Or drive straight through. Decide on the day.</div>
+          <div class="drive-c">Fuel ~€6–8 this leg</div>
+        </div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">Evening</div>
+          <div class="pr-body">
+            <div class="pr-title">Arrive Berat · Check in · Mangalem walk</div>
+            <div class="pr-desc">Drop bags at Guesthouse Guri. The Mangalem quarter is right outside. If there's energy: 30 minutes on the cobblestones, the stone bridge over the Osum, the old town coming to life at dusk. If not: rest. Tomorrow is full.</div>
+            <div class="tags"><span class="tag tag-hist">UNESCO old town</span></div>
+          </div>
+          <div class="pr-cost">Free</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">8:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Dinner — <a href="https://www.google.com/maps/search/?api=1&query=Mangalemi+Restaurant+Berat+Albania" target="_blank" class="lk">Mangalemi Restaurant</a>, Berat</div>
+            <div class="pr-desc">Below the castle, excellent terrace view. Stuffed peppers, grilled lamb, local wine. Or ask your hosts — they may cook for you if asked in advance. Budget €10–14/pp.</div>
+            <div class="tags"><span class="tag tag-food">dinner</span></div>
+          </div>
+          <div class="pr-cost">€10–14/pp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day" id="d4">
+    <div class="day-head">
+      <div class="day-num">04</div>
+      <div class="day-info">
+        <div class="day-label">Monday, April 13 · Berat</div>
+        <div class="day-title">Berat Full Day · <em>Castle at Golden Hour</em></div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Berat</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Slow morning through Mangalem and Gorica. Wine tasting and lunch at Çobo Winery. Climb to the inhabited medieval castle in the afternoon. Stay for golden hour — light turning the thousand windows gold from above. Dinner at Antigonea.</div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">Morning</div>
+          <div class="pr-body">
+            <div class="pr-title">Breakfast · Wander Mangalem and Gorica</div>
+            <div class="pr-desc">Breakfast included. Cross the stone bridge over the Osum to Gorica on the other bank. Look up at the thousand windows from below. Berat is a UNESCO World Heritage Site — one of the most distinctive townscapes in Europe.</div>
+            <div class="tags"><span class="tag tag-hist">UNESCO</span></div>
+          </div>
+          <div class="pr-cost">Free</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">11:00 AM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Cobo+Winery+Berat+Albania" target="_blank" class="lk">Çobo Winery</a> — tasting + lunch</div>
+            <div class="pr-desc">15 min from Berat. 4–5 wine tasting with local cheese, bread, and meats on the terrace. Call ahead: <a href="tel:+355692062726" class="lk-gold">+355 69 206 2726</a>. Their Shesh i Zi red is the standout.</div>
+            <div class="tags"><span class="tag tag-food">wine + lunch</span></div>
+          </div>
+          <div class="pr-cost">€15–20/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">3:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Berat+Castle+Kalaja+Albania" target="_blank" class="lk">Berat Castle (Kalaja)</a> — afternoon climb</div>
+            <div class="pr-desc">People live inside these medieval walls. Byzantine churches, small cafes, rooftop views over the valley. 20-min walk up from Mangalem. Entry free or ~€2.</div>
+            <div class="tags"><span class="tag tag-hist">castle</span></div>
+          </div>
+          <div class="pr-cost">Free–€2/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">5:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Golden hour from the walls</div>
+            <div class="pr-desc">Stay for sunset. The light turns the thousand windows gold from above. This is the shot — one of the best views in Albania. Descend slowly through Mangalem as the city lights up.</div>
+          </div>
+          <div class="pr-cost">Free</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">7:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Dinner — <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Antigonea+Berat+Albania" target="_blank" class="lk">Restaurant Antigonea</a>, Mangalem</div>
+            <div class="pr-desc">Stone walls, candlelit, right in the quarter. Completely different experience from Mangalemi the night before. Traditional dishes, excellent wine by the carafe, intimate. One of the best tables in Berat.</div>
+            <div class="tags"><span class="tag tag-food">dinner</span></div>
+          </div>
+          <div class="pr-cost">€12–16/pp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day" id="d5">
+    <div class="day-head">
+      <div class="day-num">05</div>
+      <div class="day-info">
+        <div class="day-label">Tuesday, April 14 · Berat → Himarë</div>
+        <div class="day-title"><em>Osumi Canyon</em> · Drive the Riviera</div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Berat → Himarë</div>
+        <div class="day-adv">⚡ Adventure Day</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Morning: Osumi Canyon canyoning — the trip's biggest adrenaline day. Then drive south via the Llogara mountain pass with its staggering views of the Riviera and Corfu. Arrive Himarë for seafood on the harbor.</div>
+
+      <div class="stay">
+        <div class="stay-l">
+          <div class="stay-e">Tonight's Stay · 3 nights Apr 14–17</div>
+          <div class="stay-n"><a href="https://www.google.com/maps/search/?api=1&query=Elpis+Guest+House+Himara+Albania" target="_blank" class="lk-ink">Elpis Guest House — Himarë</a></div>
+          <div class="stay-d">4.9★ · Beautifully designed, spotless, garden breakfast, 5-min walk to the beach. Host Haretini consistently called outstanding. Free parking. Multiple reviewers say it was the best accommodation of their whole Albania trip.</div>
+          <div class="stay-links"><a href="https://www.google.com/maps/search/?api=1&query=Elpis+Guest+House+Himara+Albania" target="_blank" class="btn btn-gold">Google Maps</a><a href="https://www.booking.com/hotel/al/elpis-guest-house.html" target="_blank" class="btn btn-gold">Booking.com</a><a href="tel:+355694015491" class="btn btn-gold">📞 +355 69 401 5491</a></div>
+        </div>
+        <div class="stay-r"><div class="stay-rate">€25–35</div><div class="stay-note">per person / night · 3 nights</div></div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">9:00 AM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Albania+Canyoning+Berat+Albania" target="_blank" class="lk">Osumi Canyon Canyoning</a></div>
+            <div class="pr-desc">25 km of towering limestone gorge. Cliff jumps, natural water slides, rappelling. Wetsuits + gear provided. 3–4 hours. Book: <a href="https://www.instagram.com/albania_canyoning/" target="_blank" class="lk">@albania_canyoning</a> · <a href="tel:+355695495192" class="lk-gold">+355 69 549 5192</a>. Book 2 weeks ahead, reconfirm morning of. <b>Weather backup:</b> slow morning in Berat, drive to Himarë after lunch.</div>
+            <div class="tags"><span class="tag tag-adv">⚡ canyoning</span><span class="tag tag-adv">gorge</span></div>
+          </div>
+          <div class="pr-cost">€30–40/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">2:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Panorama+Llogara+viewpoint+Albania" target="_blank" class="lk">Panorama Llogara</a> — mountain pass stop</div>
+            <div class="pr-desc">~1,000m on SH8 · 4.8★. On a clear day: Corfu below, the full Riviera unspooling south, occasionally Italy. Honey + fruit stand on-site. <b>Take the mountain road — not the tunnel.</b> This is a top-5 moment of the trip.</div>
+            <div class="tags"><span class="tag tag-adv">mountain pass</span></div>
+          </div>
+          <div class="pr-cost">Free</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">5:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Arrive Himarë · Check in · Harbor dinner</div>
+            <div class="pr-desc">Walk to the harbor (5 min from Elpis). Order what came in that morning. <a href="https://www.google.com/maps/search/?api=1&query=Taverna+Lefteri+Himara+Albania" target="_blank" class="lk">Taverna Lefteri</a> is reliable. Grilled sea bass, mussels in wine, cold Korça beer.</div>
+            <div class="tags"><span class="tag tag-food">seafood dinner</span></div>
+          </div>
+          <div class="pr-cost">€12–16/pp</div>
+        </div>
+      </div>
+
+      <div class="drive">
+        <div>🚗</div>
+        <div>
+          <div class="drive-t">Berat → Himarë via Llogara Pass · ~174 km · 2 hr 39 min</div>
+          <div class="drive-d">A2 south to Vlora, then SH8 coast road south through Llogara National Park. Mountain road only — not the tunnel.</div>
+          <div class="drive-c">Fuel ~€9–12 this leg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day" id="d6">
+    <div class="day-head">
+      <div class="day-num">06</div>
+      <div class="day-info">
+        <div class="day-label">Wednesday, April 15 · Himarë</div>
+        <div class="day-title">Riviera Day · <em>Dhërmi + Porto Palermo</em></div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Himarë area</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Morning drive north to Dhërmi — the Riviera's standout stretch of coast. Lunch there. Afternoon south to Porto Palermo Castle, then back to Livadhi Beach for sunbeds and sunset. Dinner at Rapo's on the harbor.</div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">Morning</div>
+          <div class="pr-body">
+            <div class="pr-title">Drive north to <a href="https://www.google.com/maps/search/?api=1&query=Dhermi+Beach+Albania" target="_blank" class="lk">Dhërmi</a></div>
+            <div class="pr-desc"><b>26 min north.</b> The most consistently beautiful stretch of the Albanian Riviera — turquoise water, dramatic cliffs, hidden coves. Palasa Beach just before it is equally good and less visited. Boat trips to inaccessible coves available from the beach in season.</div>
+            <div class="tags"><span class="tag tag-sea">riviera</span></div>
+          </div>
+          <div class="pr-cost">Free–€15/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">1:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Lunch in Dhërmi · South to <a href="https://www.google.com/maps/search/?api=1&query=The+Castle+of+Porto+Palermo+Albania" target="_blank" class="lk">Porto Palermo Castle</a></div>
+            <div class="pr-desc">Any waterfront spot in Dhërmi (€8–12/pp). Then <b>13 min south of Himarë</b> — Ali Pasha's 18th century Ottoman fortress on a rocky sea cape. Eerie, atmospheric, almost no visitors. Free to explore. The bay below is one of the most beautiful on the coast.</div>
+            <div class="tags"><span class="tag tag-food">lunch</span><span class="tag tag-hist">Ottoman castle</span></div>
+          </div>
+          <div class="pr-cost">€8–12/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">4:00 PM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Livadhi+Beach+Himara+Albania" target="_blank" class="lk">Livadhi Beach</a> — sunbeds, cold drinks</div>
+            <div class="pr-desc">5-min walk from Elpis. Sunbeds (~€5–8), mountain backdrop, crystal water. Stay until sunset.</div>
+            <div class="tags"><span class="tag tag-sea">beach</span></div>
+          </div>
+          <div class="pr-cost">€5–8/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">7:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Dinner — <a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Rapo+Himara+Albania" target="_blank" class="lk">Restaurant Rapo's</a>, Himarë harbor</div>
+            <div class="pr-desc">Excellent mezze and grilled seafood. Carafe of local white wine. €10–15/pp.</div>
+            <div class="tags"><span class="tag tag-food">seafood dinner</span></div>
+          </div>
+          <div class="pr-cost">€10–15/pp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 7 -->
+  <div class="day" id="d7">
+    <div class="day-head">
+      <div class="day-num">07</div>
+      <div class="day-info">
+        <div class="day-label">Thursday, April 16 · Himarë</div>
+        <div class="day-title"><em>Gjipe Beach</em> · Adventure Coast Day</div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Himarë area</div>
+        <div class="day-adv">⚡ Adventure Day</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">The trip's best beach day. Drive to Gjipe, hike 40 minutes down through a limestone canyon to a completely hidden cove. Swim, cliff jump, beach bar lunch. Back to Livadhi Beach for a slow afternoon. Final Himarë dinner.</div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">8:30 AM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Gjipe+Beach+Albania" target="_blank" class="lk">Gjipe Beach</a> — canyon hike-in · <b>33 min north</b></div>
+            <div class="pr-desc">Park at the lot (~€4 cash). Hike 30–40 min down a limestone canyon. Opens onto a completely hidden pebble beach: cliffs, crystal water, virtually nobody in April. <b>Wear real shoes. Bring water, goggles, sunscreen.</b> Small beach bar on-site.</div>
+            <div class="tags"><span class="tag tag-adv">⚡ hike-in</span><span class="tag tag-sea">hidden beach</span></div>
+          </div>
+          <div class="pr-cost">€4 parking</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">10:00 AM</div>
+          <div class="pr-body">
+            <div class="pr-title">Swim · Cliff jump · Beach bar lunch</div>
+            <div class="pr-desc">Water ~17–19°C in April — swimmable. Jumpable cliffs for anyone willing. Beach bar lunch ~€10/pp. <b>Begin the return hike by 2:30 PM</b> — it's 40 min uphill. <b>Weather backup:</b> <a href="https://www.google.com/maps/search/?api=1&query=Jale+Beach+Albania" target="_blank" class="lk">Jalë beach</a> (sheltered bay, beach club energy) or Porto Palermo Castle if missed on Day 6.</div>
+            <div class="tags"><span class="tag tag-sea">swimming</span><span class="tag tag-adv">cliff jump</span></div>
+          </div>
+          <div class="pr-cost">€8–12/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">3:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Livadhi+Beach+Himara+Albania" target="_blank" class="lk">Livadhi Beach</a> — slow afternoon</div>
+            <div class="pr-desc">Sunbeds, cold drinks, stay until sunset. The kind of afternoon that earns its place in a trip.</div>
+            <div class="tags"><span class="tag tag-sea">sunbeds</span></div>
+          </div>
+          <div class="pr-cost">€5–8/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">7:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Last night in Himarë — dinner on the harbor</div>
+            <div class="pr-desc">Ask Haretini at Elpis for tonight's recommendation, or return to Taverna Lefteri. Early night — early start tomorrow.</div>
+            <div class="tags"><span class="tag tag-food">dinner</span></div>
+          </div>
+          <div class="pr-cost">€10–15/pp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 8 -->
+  <div class="day" id="d8">
+    <div class="day-head">
+      <div class="day-num">08</div>
+      <div class="day-info">
+        <div class="day-label">Friday, April 17 · Himarë → Ksamil</div>
+        <div class="day-title">Blue Eye · Butrint · <em>Ksamil</em></div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Himarë → Ksamil</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Drive south via the Blue Eye spring — one of the most surreal natural sights in Europe. Optional stop at Butrint ruins. Arrive Ksamil: white sand, three islands, the best water of the trip. Seafood dinner, early night.</div>
+
+      <div class="alert"><span>🚨</span><div><b>Departure note:</b> Ksamil → TIA is 3 hrs 44 min (verified). Nick's flight is 12:05 PM — must be at TIA by 10:00 AM. <b>Leave Ksamil by 6:15 AM.</b> Shannon (2:20 PM flight) can leave by 8:30 AM. Set alarms tonight.</div></div>
+
+      <div class="stay">
+        <div class="stay-l">
+          <div class="stay-e">Tonight's Stay · 1 night Apr 17–18</div>
+          <div class="stay-n"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Meta+Ksamil+Albania" target="_blank" class="lk-ink">Hotel Meta — Ksamil</a></div>
+          <div class="stay-d">4.8★ · Sea-view rooms across from the beach. Staff print you a local tips sheet on arrival. The breakfast is described in review after review as the best in Ksamil. Request a balcony room with sea view.</div>
+          <div class="stay-links"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Meta+Ksamil+Albania" target="_blank" class="btn btn-gold">Google Maps</a><a href="https://www.booking.com/hotel/al/meta-ksamil.html" target="_blank" class="btn btn-gold">Booking.com</a><a href="tel:+355693194357" class="btn btn-gold">📞 +355 69 319 4357</a></div>
+        </div>
+        <div class="stay-r"><div class="stay-rate">€30–40</div><div class="stay-note">per person / night</div></div>
+      </div>
+
+      <div class="plan">
+        <div class="plan-row">
+          <div class="pr-time">9:00 AM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Syri+i+Kalter+Blue+Eye+Spring+Albania" target="_blank" class="lk">Syri i Kaltër — The Blue Eye</a> · 1 hr 37 min from Himarë</div>
+            <div class="pr-desc">An underground river emerges as a natural spring of electric blue — divers have reached 50m without finding the bottom. Entry ~€2. Go early. <b>Worth it in any weather</b> — the color is the spectacle, not the swimming.</div>
+            <div class="tags"><span class="tag tag-sea">natural spring</span></div>
+          </div>
+          <div class="pr-cost">~€2/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">11:30 AM</div>
+          <div class="pr-body">
+            <div class="pr-title">Optional: <a href="https://www.google.com/maps/search/?api=1&query=Butrint+National+Park+Albania" target="_blank" class="lk">Butrint National Park</a> — UNESCO ruins</div>
+            <div class="pr-desc">5 km south of Ksamil. Greek, Roman, Byzantine, Venetian ruins on a forested lagoon peninsula. Entry ~€6. Allow 1.5–2 hrs. Skip if you'd rather get straight to the beach.</div>
+            <div class="tags"><span class="tag tag-hist">UNESCO ruins</span></div>
+          </div>
+          <div class="pr-cost">€6/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">1:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title"><a href="https://www.google.com/maps/search/?api=1&query=Ksamil+Beach+Albania" target="_blank" class="lk">Ksamil Beach</a> — the finale</div>
+            <div class="pr-desc">White sand, three islands you can swim to in 10–15 min. April = empty. Sunbeds ~€10–15/pp. Bring goggles — water clarity is the point. <b>Weather backup:</b> long harbor lunch, wine, walk the village.</div>
+            <div class="tags"><span class="tag tag-sea">beach</span><span class="tag tag-sea">swim to islands</span></div>
+          </div>
+          <div class="pr-cost">€10–15/pp</div>
+        </div>
+        <div class="plan-row">
+          <div class="pr-time">7:30 PM</div>
+          <div class="pr-body">
+            <div class="pr-title">Seafood dinner — Ksamil harbor</div>
+            <div class="pr-desc">Ask Hotel Meta for their recommendation. Restaurant Butrinti near the beach is consistently solid. Mussels, octopus, sea bream, cold white wine. <b>Early night.</b></div>
+            <div class="tags"><span class="tag tag-food">seafood dinner</span></div>
+          </div>
+          <div class="pr-cost">€12–18/pp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 9 -->
+  <div class="day" id="d9">
+    <div class="day-head">
+      <div class="day-num">09</div>
+      <div class="day-info">
+        <div class="day-label">Saturday, April 18</div>
+        <div class="day-title">Fly <em>Home</em></div>
+      </div>
+      <div class="day-meta">
+        <div class="day-loc">Ksamil → TIA ✈</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="day-summary">Nick and Shannon drive to TIA together, leaving Ksamil at 6:15 AM. Drop the car, check in together, then split at their separate gates. Nick's flight goes first at 12:05 PM — Shannon has 2+ hours in the airport after drop-off.</div>
+
+      <div class="alert"><span>⏰</span><div><b>Both leave Ksamil together: 6:15 AM</b> · 3 hr 44 min drive · Arrive TIA ~10:00 AM · Return car · Check in · Split at gates<br>Nick: OS752 departs <b>12:05 PM</b> · Shannon: Lufthansa departs <b>2:20 PM</b></div></div>
+
+      <div class="drive">
+        <div>🚗</div>
+        <div>
+          <div class="drive-t">Ksamil → TIA · ~271 km · 3 hr 44 min (verified)</div>
+          <div class="drive-d">Nick and Shannon drive together. SH4 north. Return car to Sixt/Europcar at TIA — then check in. Shannon has ~2 hrs to kill after Nick's gate. Airport has a decent café.</div>
+          <div class="drive-c">Fuel ~€12–15 final leg</div>
+        </div>
+      </div>
+
+      <div class="flt-grid">
+        <div class="flt-card n">
+          <div class="flt-who">Nick — home</div>
+          <div class="flt-time">Dep 12:05 PM</div>
+          <div class="flt-detail"><b>OS752</b> TIA→VIE · dep 12:05 PM · arr 1:35 PM<br><b>UA9819</b> VIE→JFK · dep 4:55 PM · arr <b>8:05 PM</b><br>VIE layover 3h 20m — comfortable</div>
+        </div>
+        <div class="flt-card s">
+          <div class="flt-who">Shannon — home</div>
+          <div class="flt-time">Dep 2:20 PM</div>
+          <div class="flt-detail"><b>Lufthansa</b> TIA→FRA nonstop<br>Dep <b>2:20 PM</b> · Arr Frankfurt <b>4:40 PM</b><br>~2 hrs at airport after dropping the car</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ BUDGET ═══════════════════════════ -->
+<div id="budget" class="section">
+  <div class="section-title">
+    <div class="section-num">06</div>
+    <div>
+      <div class="section-label">Per Person · Excluding Flights</div>
+      <div class="section-h">What You're <em>Spending</em></div>
+    </div>
+  </div>
+
+  <div class="budget-grid">
+    <div class="budget-cell"><div class="bc-l">Lodging · 8 nights</div><div class="bc-v">€155<span style="font-size:16px">–210</span></div><div class="bc-s">Hotel + 3 guesthouses, meals where noted</div></div>
+    <div class="budget-cell"><div class="bc-l">Car + fuel ÷ 3</div><div class="bc-v">€65<span style="font-size:16px">–90</span></div><div class="bc-s">8 days, full CDW, return TIA Apr 18</div></div>
+    <div class="budget-cell"><div class="bc-l">Activities</div><div class="bc-v">€60<span style="font-size:16px">–90</span></div><div class="bc-s">Zipline, canyoning, sunbeds, entry fees</div></div>
+    <div class="budget-cell"><div class="bc-l">Food + drinks</div><div class="bc-v">€100<span style="font-size:16px">–140</span></div><div class="bc-s">Albania is extraordinarily cheap</div></div>
+    <div class="budget-cell total"><div class="bc-l">Total per person</div><div class="bc-v">€380–530</div><div class="bc-s">Expensive in experience · smart in budget</div></div>
+  </div>
+  <div class="budget-note">1 EUR ≈ 105 ALL · EUR accepted widely · Cash essential at Gjipe Beach, Llogara, furgons · Tip 10% — meaningful here</div>
+</div>
+
+<!-- ═══════════════════════════ BOOKING ═══════════════════════════ -->
+<div id="booking" class="section">
+  <div class="section-title">
+    <div class="section-num">07</div>
+    <div>
+      <div class="section-label">In Priority Order</div>
+      <div class="section-h">Booking <em>Priorities</em></div>
+    </div>
+  </div>
+
+  <div class="book-section">
+    <div class="book-group-title">Lock in early — these move</div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Rental Car — 8 days, pickup TIA Apr 10, return TIA Apr 18 morning</div>
+        <div class="bi-note">Full CDW + theft insurance. Confirm return before Nick's 12:05 PM flight.</div>
+        <div class="bi-links"><a href="https://www.sixt.com/car-rental/albania/tirana-airport/" target="_blank" class="btn btn-sea">Sixt TIA</a><a href="https://www.europcar.com/en-gb/car-rental/albania/tirana-airport" target="_blank" class="btn btn-sea">Europcar TIA</a></div>
+      </div>
+      <span class="urg u1">Do first</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Hotel near Blloku — Tirana · 2 nights Apr 10–12</div>
+        <div class="bi-note">Boutique or 4-star with private rooms. Blloku area. Check Hotel Elior or search Booking.com "Blloku Tirana."</div>
+        <div class="bi-links"><a href="https://www.booking.com/searchresults.html?ss=Blloku+Tirana" target="_blank" class="btn btn-sea">Booking.com</a><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Elior+Tirana+Albania" target="_blank" class="btn btn-sea">Hotel Elior</a></div>
+      </div>
+      <span class="urg u1">Do first</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Zipline Albania — Petrela · Sunday Apr 12, ~11:30 AM</div>
+        <div class="bi-note">Book zipline online in advance. Quads added on-site. Buy direct — cheaper than GetYourGuide.</div>
+        <div class="bi-links"><a href="https://www.zipline.al/" target="_blank" class="btn btn-terra">zipline.al</a><a href="tel:+355674004444" class="btn btn-terra">📞 +355 67 400 4444</a></div>
+      </div>
+      <span class="urg u1">Do first</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Guesthouse Guri — Berat · 2 nights Apr 12–14</div>
+        <div class="bi-note">Call to book. Family-run, tiny, fills quickly in spring.</div>
+        <div class="bi-links"><a href="https://www.google.com/maps/search/?api=1&query=Guesthouse+Guri+Mangalem+Berat+Albania" target="_blank" class="btn btn-sea">Google Maps</a><a href="tel:+355682070560" class="btn btn-sea">📞 +355 68 207 0560</a></div>
+      </div>
+      <span class="urg u1">Do first</span>
+    </div>
+
+    <div class="book-group-title" style="margin-top:24px;">Reserve 2 weeks out</div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Albania Canyoning — Osumi Canyon · Tue Apr 14, 9 AM</div>
+        <div class="bi-note">Book via Instagram + confirm by phone. Reconfirm morning of — small operator.</div>
+        <div class="bi-links"><a href="https://www.instagram.com/albania_canyoning/" target="_blank" class="btn btn-terra">@albania_canyoning</a><a href="tel:+355695495192" class="btn btn-terra">📞 +355 69 549 5192</a></div>
+      </div>
+      <span class="urg u2">2 weeks out</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Elpis Guest House — Himarë · 3 nights Apr 14–17</div>
+        <div class="bi-note">Request balcony rooms. Host Haretini is excellent. Free parking.</div>
+        <div class="bi-links"><a href="https://www.google.com/maps/search/?api=1&query=Elpis+Guest+House+Himara+Albania" target="_blank" class="btn btn-sea">Google Maps</a><a href="https://www.booking.com/hotel/al/elpis-guest-house.html" target="_blank" class="btn btn-sea">Booking.com</a><a href="tel:+355694015491" class="btn btn-sea">📞 +355 69 401 5491</a></div>
+      </div>
+      <span class="urg u2">2 weeks out</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Hotel Meta — Ksamil · 1 night Apr 17–18</div>
+        <div class="bi-note">Request sea-view balcony room.</div>
+        <div class="bi-links"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Meta+Ksamil+Albania" target="_blank" class="btn btn-sea">Google Maps</a><a href="https://www.booking.com/hotel/al/meta-ksamil.html" target="_blank" class="btn btn-sea">Booking.com</a><a href="tel:+355693194357" class="btn btn-sea">📞 +355 69 319 4357</a></div>
+      </div>
+      <span class="urg u2">2 weeks out</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Mullixhiu Restaurant — Tirana · Sat Apr 11, 7:30 PM</div>
+        <div class="bi-note">Best traditional Albanian restaurant in the country. Busy on Saturday evenings — reserve ahead.</div>
+        <div class="bi-links"><a href="https://www.google.com/maps/search/?api=1&query=Mullixhiu+Restaurant+Tirana+Albania" target="_blank" class="btn btn-sea">Reserve on Google Maps</a></div>
+      </div>
+      <span class="urg u2">2 weeks out</span>
+    </div>
+
+    <div class="book-group-title" style="margin-top:24px;">Confirm 1 week out</div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Bunk'Art 2 tickets — Sat Apr 11 morning</div>
+        <div class="bi-note">Pre-book to skip weekend queues.</div>
+        <div class="bi-links"><a href="https://bunkart.al/" target="_blank" class="btn">bunkart.al</a></div>
+      </div>
+      <span class="urg u3">1 week out</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Çobo Winery — tasting + lunch · Mon Apr 13</div>
+        <div class="bi-note">Call to arrange terrace tasting and lunch. Small operation.</div>
+        <div class="bi-links"><a href="https://www.google.com/maps/search/?api=1&query=Cobo+Winery+Berat+Albania" target="_blank" class="btn">Google Maps</a><a href="tel:+355692062726" class="btn">📞 +355 69 206 2726</a></div>
+      </div>
+      <span class="urg u3">1 week out</span>
+    </div>
+
+    <div class="book-item">
+      <div>
+        <div class="bi-name">Osumi Canyon — reconfirm morning of Apr 14</div>
+        <div class="bi-note">Call @albania_canyoning the morning of to confirm conditions and start time.</div>
+      </div>
+      <span class="urg u3">Day of</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ TOOLKIT ═══════════════════════════ -->
+<div id="toolkit" class="section">
+  <div class="section-title">
+    <div class="section-num">08</div>
+    <div>
+      <div class="section-label">Reference</div>
+      <div class="section-h">Trip <em>Toolkit</em></div>
+    </div>
+  </div>
+
+  <div class="toolkit">
+    <div class="tk-card">
+      <div class="tk-title">Flights</div>
+      <ul>
+        <li><b>Nick out:</b> UA9820 JFK→VIE dep Thu Apr 9, 9:45 PM + UA9837 VIE→TIA arr Fri 2:10 PM</li>
+        <li><b>Nick home:</b> OS752 TIA→VIE dep Sat Apr 18, 12:05 PM + UA9819 VIE→JFK arr 8:05 PM</li>
+        <li><b>Shannon out:</b> Lufthansa FRA→TIA dep Fri Apr 10, 9:20 PM · arr 11:30 PM</li>
+        <li><b>Shannon home:</b> Lufthansa TIA→FRA dep Sat Apr 18, 2:20 PM · arr FRA 4:40 PM</li>
+        <li><b>VIE inbound layover: 45 min</b> — no checked bags</li>
+        <li><b>Nick + Shannon leave Ksamil together: 6:15 AM</b> · arrive TIA ~10:00 AM</li>
+      </ul>
+    </div>
+    <div class="tk-card">
+      <div class="tk-title">Verified Drive Times</div>
+      <ul>
+        <li>Tirana → Petrela (zipline): <b>21 min</b></li>
+        <li>Tirana → Berat: <b>1 hr 40 min</b></li>
+        <li>Berat → Himarë: <b>2 hr 39 min</b></li>
+        <li>Himarë → Porto Palermo: <b>13 min south</b></li>
+        <li>Himarë → Dhërmi: <b>26 min north</b></li>
+        <li>Himarë → Gjipe Beach: <b>33 min north</b></li>
+        <li>Himarë → Blue Eye: <b>1 hr 37 min</b></li>
+        <li>Himarë → Ksamil: <b>1 hr 31 min</b></li>
+        <li>Ksamil → TIA: <b>3 hr 44 min</b></li>
+      </ul>
+    </div>
+    <div class="tk-card">
+      <div class="tk-title">Saturday Night Rules (Apr 11)</div>
+      <ul>
+        <li><b>Do not arrive before 10 PM.</b> Non-negotiable.</li>
+        <li>Order: Radio Bar → Stereo Club</li>
+        <li><b>Stereo:</b> LGBTQ+-friendly, mixed, safe, goes until 5 AM</li>
+        <li>Cocktails €4–6. Albania is cheap even at bars.</li>
+        <li><a href="https://bolt.eu/" target="_blank" class="lk-ink"><b>Bolt app</b></a> for taxis — cheap, reliable, no haggling</li>
+        <li>Smoking indoors is normal. Not California.</li>
+      </ul>
+    </div>
+    <div class="tk-card">
+      <div class="tk-title">Money + Practical</div>
+      <ul>
+        <li>Currency: Lek. <b>1 EUR ≈ 105 ALL.</b> EUR accepted widely.</li>
+        <li><b>Cash essential</b> at Gjipe, Llogara, small restaurants, furgons</li>
+        <li>ATMs in every city. Stock up before going south.</li>
+        <li>Tip 10% — significant in this economy</li>
+        <li><a href="https://bolt.eu/" target="_blank" class="lk-ink"><b>Bolt</b></a> for taxis in Tirana</li>
+        <li>Albanian SIM card: ~€5 at TIA. Works all trip.</li>
+      </ul>
+    </div>
+    <div class="tk-card">
+      <div class="tk-title">Pack These</div>
+      <ul>
+        <li><b>Real shoes</b> for Gjipe canyon hike + Berat castle</li>
+        <li>Goggles — Gjipe, Blue Eye, Ksamil are about clarity</li>
+        <li>Sunscreen — April Adriatic is deceptively strong</li>
+        <li>One going-out outfit for Saturday Blloku</li>
+        <li>Warm layer — April evenings on the coast are cool</li>
+        <li>Small cash stash for parking, beach bars, rural stops</li>
+      </ul>
+    </div>
+    <div class="tk-card">
+      <div class="tk-title">Albania Basics</div>
+      <ul>
+        <li><b>Albanians nod for "no," shake for "yes"</b> — this will confuse you</li>
+        <li>English widely spoken under 40 in cities</li>
+        <li><a href="https://translate.google.com/" target="_blank" class="lk-ink">Google Translate</a> camera mode works on menus</li>
+        <li>Accept raki or coffee when offered — hospitality culture is real</li>
+        <li>April = low season. No crowds, best prices of the year.</li>
+        <li>Albania is safe and warm. One of the friendliest countries in Europe.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<div class="footer">Albania · April 10–18, 2026 · Nick + Shannon · Private Itinerary</div>
+
+<!-- ═══════════════════════════ MAP ═══════════════════════════ -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  var map = L.map('tripmap',{center:[40.3,20.0],zoom:7,zoomControl:true,scrollWheelZoom:false});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
+  var T='#b84a18', S='#1a6385', L2='#9a8f7e';
+  function icon(c,l){
+    return L.divIcon({className:'',
+      html:'<div style="width:28px;height:28px;border-radius:50%;background:'+c+';border:2.5px solid white;box-shadow:0 2px 8px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;"><span style="font-family:\'DM Mono\',monospace;font-size:8px;font-weight:600;color:white;letter-spacing:-.02em">'+l+'</span></div>',
+      iconSize:[28,28],iconAnchor:[14,14],popupAnchor:[0,-16]});
+  }
+  function pop(city,dates,desc,anchor){
+    return '<div style="font-family:\'Jost\',sans-serif;min-width:140px;">'
+      +'<div style="font-family:\'DM Mono\',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:'+L2+';margin-bottom:2px;">'+dates+'</div>'
+      +'<div style="font-size:14px;font-weight:500;color:#1a1713;margin-bottom:3px;">'+city+'</div>'
+      +'<div style="font-size:11px;color:#6a6050;margin-bottom:8px;line-height:1.5;">'+desc+'</div>'
+      +'<a href="#'+anchor+'" style="font-family:\'DM Mono\',monospace;font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:'+T+';border-bottom:1px solid rgba(184,74,24,.3);">Jump to day →</a>'
+      +'</div>';
+  }
+  var route=[[41.328,19.818],[40.706,19.952],[40.102,19.743],[39.770,20.000]];
+  L.polyline(route,{color:T,weight:1.5,opacity:.35,dashArray:'5 5'}).addTo(map);
+
+  var stops=[
+    {ll:[41.328,19.818],l:'1–2',c:T,city:'Tirana',dates:'Apr 10–12',desc:'Arrival · Blloku nightlife · Mullixhiu',a:'d1'},
+    {ll:[41.05,19.72],l:'3',c:S,city:'Petrela',dates:'Day 3 · morning',desc:'Zipline + quad bikes · 21 min from Tirana',a:'d3'},
+    {ll:[40.706,19.952],l:'3–4',c:T,city:'Berat',dates:'Apr 12–14',desc:'UNESCO old town · castle · Çobo Winery',a:'d3'},
+    {ll:[40.102,19.743],l:'5–7',c:T,city:'Himarë',dates:'Apr 14–17',desc:'Riviera base · canyoning · Gjipe · seafood',a:'d5'},
+    {ll:[40.176,19.719],l:'⚡',c:S,city:'Gjipe Beach',dates:'Day 7',desc:'Hike-in canyon beach · 33 min from Himarë',a:'d7'},
+    {ll:[39.875,20.004],l:'★',c:S,city:'Blue Eye',dates:'Day 8',desc:'Natural spring · 1hr 37m from Himarë',a:'d8'},
+    {ll:[39.770,20.000],l:'8',c:T,city:'Ksamil',dates:'Apr 17–18',desc:'White sand · swim to islands · fly home',a:'d8'},
+  ];
+  stops.forEach(function(s){
+    L.marker(s.ll,{icon:icon(s.c,s.l)}).addTo(map)
+      .bindPopup(pop(s.city,s.dates,s.desc,s.a),{maxWidth:200});
+  });
+})();
+</script>
+
+<!-- COLLAPSIBLE TOGGLE SCRIPT -->
+<script>
+document.querySelectorAll('.detail-toggle').forEach(function(t){
+  t.addEventListener('click',function(){
+    this.classList.toggle('open');
+    var b=this.nextElementSibling;
+    if(b && b.classList.contains('detail-body')){b.classList.toggle('open');}
+  });
+});
+</script>
+</body>
+</html>
