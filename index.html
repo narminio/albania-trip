@@ -276,18 +276,62 @@ a{color:inherit;text-decoration:none;}
 /* ── FOOTER ── */
 .footer{padding:24px var(--gap);text-align:center;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);background:var(--warm);border-top:1px solid var(--rule);}
 
+/* ── CONFIRMED BOOKING CARDS ── */
+.confirmed-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:8px;}
+.conf-card{background:var(--paper);padding:20px 18px;position:relative;}
+.conf-card.done{border-top:2px solid var(--pine);}
+.conf-city{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--pine);margin-bottom:4px;}
+.conf-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;line-height:1.25;margin-bottom:8px;color:var(--ink);}
+.conf-dates{font-family:'DM Mono',monospace;font-size:9px;color:var(--light);margin-bottom:10px;}
+.conf-row{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:9px;padding:5px 0;border-bottom:1px solid var(--rule);}
+.conf-row:last-child{border-bottom:none;}
+.conf-key{color:var(--light);letter-spacing:.06em;text-transform:uppercase;}
+.conf-val{color:var(--ink);font-weight:500;}
+.conf-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:7px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;background:var(--pine);color:white;margin-bottom:10px;}
+
 /* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .confirmed-grid{grid-template-columns:1fr 1fr;}
+}
 @media(max-width:680px){
-  :root{--gap:20px;}
-  .hero-top{padding:14px var(--gap);}
+  :root{--gap:16px;}
+  .hero-top{padding:14px var(--gap);flex-direction:column;align-items:flex-start;}
+  .hero-flights{width:100%;}
+  .hero-main{padding:36px var(--gap) 44px;}
+  .hero-tag{font-size:11px;}
   .qv{grid-template-columns:1fr 1fr;}
+  .qvc:nth-child(5){grid-column:span 2;}
   .why-grid,.moments,.adv-grid,.food-grid{grid-template-columns:1fr;}
   .flt-grid{grid-template-columns:1fr;}
-  .day-head{grid-template-columns:auto 1fr;}
+  .day-head{grid-template-columns:auto 1fr;gap:12px;padding:16px var(--gap);}
+  .day-num{font-size:40px;padding-right:12px;}
   .day-meta{display:none;}
+  .day-body{padding:16px var(--gap);}
+  .plan-row{grid-template-columns:50px 1fr auto;}
+  .plan-row:hover{margin:0 calc(-1 * var(--gap));padding:10px var(--gap);}
+  .stay{flex-direction:column;}
+  .stay-r{text-align:left;}
   .budget-grid{grid-template-columns:1fr 1fr;}
+  .budget-cell.total{grid-column:span 2;}
   .toolkit{grid-template-columns:1fr;}
-  .plan-row{grid-template-columns:52px 1fr auto;}
+  .section{padding:44px 0 0;}
+  .section-num{font-size:40px;}
+  .book-item{flex-direction:column;gap:10px;}
+  .urg{align-self:flex-start;}
+  .confirmed-grid{grid-template-columns:1fr;}
+  .rs{padding:18px 0;}
+}
+@media(max-width:420px){
+  .hero-flights{flex-direction:column;}
+  .fcard{width:100%;}
+  .qv{grid-template-columns:1fr;}
+  .qvc:nth-child(5){grid-column:auto;}
+  .budget-grid{grid-template-columns:1fr;}
+  .budget-cell.total{grid-column:auto;}
+  .pr-cost{display:none;}
+  .plan-row{grid-template-columns:44px 1fr;}
+  .section-num{font-size:32px;}
+  .hero-title{font-size:clamp(64px,18vw,120px);}
 }
 </style>
 </head>
@@ -1185,6 +1229,62 @@ a{color:inherit;text-decoration:none;}
     <div>
       <div class="section-label">In Priority Order</div>
       <div class="section-h">Booking <em>Priorities</em></div>
+    </div>
+  </div>
+
+  <!-- CONFIRMED ACCOMMODATIONS -->
+  <div class="book-section" style="margin-bottom:32px;">
+    <div class="book-group-title">Confirmed Accommodations</div>
+    <div style="height:12px;"></div>
+    <div class="confirmed-grid">
+
+      <div class="conf-card done">
+        <div class="conf-badge">✓ Confirmed</div>
+        <div class="conf-city">Tirana</div>
+        <div class="conf-name">The Bearded Dad Hostel</div>
+        <div class="conf-dates">Apr 10–12 · 2 nights · 2 rooms</div>
+        <div class="conf-row"><span class="conf-key">Confirmation</span><span class="conf-val">6695219480</span></div>
+        <div class="conf-row"><span class="conf-key">PIN</span><span class="conf-val">1640</span></div>
+        <div class="conf-row"><span class="conf-key">Check-in</span><span class="conf-val">Fri Apr 10 · 12:00 PM</span></div>
+        <div class="conf-row"><span class="conf-key">Check-out</span><span class="conf-val">Sun Apr 12 · 8:00 AM</span></div>
+      </div>
+
+      <div class="conf-card done">
+        <div class="conf-badge">✓ Confirmed</div>
+        <div class="conf-city">Berat</div>
+        <div class="conf-name">Old Town Guesthouse Guri</div>
+        <div class="conf-dates">Apr 12–14 · 2 nights · Economy Twin</div>
+        <div class="conf-row"><span class="conf-key">Confirmation</span><span class="conf-val">6560099783</span></div>
+        <div class="conf-row"><span class="conf-key">PIN</span><span class="conf-val">4117</span></div>
+        <div class="conf-row"><span class="conf-key">Check-in</span><span class="conf-val">Sun Apr 12 · 3:00 PM</span></div>
+        <div class="conf-row"><span class="conf-key">Check-out</span><span class="conf-val">Tue Apr 14 · 8:00 AM</span></div>
+        <div class="conf-row"><span class="conf-key">Phone</span><span class="conf-val"><a href="tel:+4670065810 4" class="lk">+46 70 065 81 04</a></span></div>
+      </div>
+
+      <div class="conf-card done">
+        <div class="conf-badge">✓ Confirmed</div>
+        <div class="conf-city">Himarë</div>
+        <div class="conf-name">Simadhes Garden Rooms</div>
+        <div class="conf-dates">Apr 14–17 · 3 nights · Triple Room</div>
+        <div class="conf-row"><span class="conf-key">Confirmation</span><span class="conf-val">6962233149</span></div>
+        <div class="conf-row"><span class="conf-key">PIN</span><span class="conf-val">7968</span></div>
+        <div class="conf-row"><span class="conf-key">Check-in</span><span class="conf-val">Tue Apr 14 · 3:00 PM</span></div>
+        <div class="conf-row"><span class="conf-key">Check-out</span><span class="conf-val">Fri Apr 17 · 8:00 AM</span></div>
+        <div class="conf-row"><span class="conf-key">Phone</span><span class="conf-val"><a href="tel:+355697775521" class="lk">+355 69 777 5521</a></span></div>
+      </div>
+
+      <div class="conf-card done">
+        <div class="conf-badge">✓ Confirmed</div>
+        <div class="conf-city">Ksamil</div>
+        <div class="conf-name">Hotel Meta Ksamil</div>
+        <div class="conf-dates">Apr 17–18 · 1 night · Sea View Room</div>
+        <div class="conf-row"><span class="conf-key">Confirmation</span><span class="conf-val">6541664384</span></div>
+        <div class="conf-row"><span class="conf-key">PIN</span><span class="conf-val">0437</span></div>
+        <div class="conf-row"><span class="conf-key">Check-in</span><span class="conf-val">Fri Apr 17 · 2:00 PM</span></div>
+        <div class="conf-row"><span class="conf-key">Check-out</span><span class="conf-val">Sat Apr 18 · 5:00 AM</span></div>
+        <div class="conf-row"><span class="conf-key">Phone</span><span class="conf-val"><a href="tel:+306945195958" class="lk">+30 694 519 5958</a></span></div>
+      </div>
+
     </div>
   </div>
 
